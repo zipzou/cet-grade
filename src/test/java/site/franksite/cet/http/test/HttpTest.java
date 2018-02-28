@@ -41,7 +41,7 @@ public class HttpTest {
 		String code = scanner.nextLine();
 //		LOG.debug(getHtml);
 		Map<String, Object> params = new HashMap<String, Object>();
-		params.put("data", "CET4_172_DANGCI,360032172103127,陈帆");
+		params.put("data", "CET4_172_DANGCI,XXXXXXXXXXXXXXX,XXX");
 		params.put("v", code);
 		String dataStr = helper.post("http://cache.neea.edu.cn/cet/query", params);
 		LOG.debug(dataStr);
@@ -52,8 +52,8 @@ public class HttpTest {
 	public void testWithStudent() {
 		CETHttpBusiness business = new CETHttpBusiness();
 		CETStudentBean stu = new CETStudentBean();
-		stu.setName("徐博宇");
-		stu.setExamNumber("360032172105103");
+		stu.setName("XXX");
+		stu.setExamNumber("XXXXXXXXXXXXXXX");
 		File codeFile = business.getImageCode(stu.getExamNumber());
 		Scanner scanner = new Scanner(System.in);
 		String code = scanner.nextLine();
