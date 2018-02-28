@@ -31,7 +31,7 @@ public class HttpTest {
 	@Test
 	public void testPost() throws UnsupportedEncodingException {
 		HttpHelper helper = HttpHelper.build();
-		String getHtml = helper.get("http://cache.neea.edu.cn/Imgs.do?c=CET&ik=360032172105103&t=" + Math.random());
+		String getHtml = helper.get("http://cache.neea.edu.cn/Imgs.do?c=CET&ik=XXXXXXXXXXXXXXX&t=" + Math.random());
 		if (null != getHtml) {
 			// 获取验证码地址
 			String imgRef = getHtml.substring(getHtml.indexOf("(") + 1, getHtml.indexOf(")")).replace("\"", "");
